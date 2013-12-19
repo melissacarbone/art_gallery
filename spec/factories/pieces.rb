@@ -1,6 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
+
   factory :piece do
     artist
     cost 1
@@ -8,11 +9,8 @@ FactoryGirl.define do
     date_on_sale "2013-12-19 10:05:00"
     medium
     sale
-    name "MyString"
-  end
 
-  # factory :collection_piece do
-  #   piece
-  #   collection
-  # end
+    sequence(:name) { |n| "Piece#{n}" }
+
+    end
 end
